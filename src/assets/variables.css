@@ -5,3 +5,12 @@
   --main3: #B44541;
   --dark2: #632621;
 }
+@font-face {
+  font-family: 'oldtype';
+  src: url('@/assets/OldTypefaces.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+h1, h2, h3, h4, h5, h6, p, span, div, li, body {
+  font-family: 'oldtype', serif;
+}

@@ -23,7 +23,6 @@ import './assets/variables.css';
 <style scoped>
 .container {
   color: var(--dark1);
-  min-height: 910vh;
   display: flex;
   flex-direction: column;
   footer{
@@ -31,7 +30,7 @@ import './assets/variables.css';
   }
 }
 .main-content{
-  min-height: 90vh;
+  min-height: 80vh;
   width: 80%;
   margin: auto;
   background-color: white;

@@ -1,13 +1,12 @@
 <script setup>
-
-import {RouterLink} from "vue-router";
+import { RouterLink } from "vue-router";
 </script>
 
 <template>
 <nav>
   <RouterLink to="/">Home</RouterLink>
   <RouterLink to="/play">Play</RouterLink>
-  <RouterLink to="/readings">Learn More</RouterLink>
+  <RouterLink to="/readings">Read</RouterLink>
 </nav>
 </template>
 
@@ -19,18 +18,27 @@ nav{
   background-color: var(--main2);
   border-radius: 100px;
   padding: 8px;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  border: 3px dashed var(--main3);
   a{
     border-radius: 100px;
     padding: 10px 15px;
     text-decoration: none;
     color: var(--dark1);
-    background-color: rgba(255,255,255,70%);
+    background-color: #f3e7d3;
+    width: 60px;
+    display: flex;
+    justify-content: center;
     transition: background-color 0.5s ease, padding 0.5s ease;
     &:hover{
-      background-color: rgba(255,255,255,85%);
+      background-color: #f9f3e9;
       padding: 10px 40px;
     }
+
+  }
+  .router-link-active {
+    background-color: var(--main1);
+    font-weight: bold;
   }
 }
 @media (width < 600px){

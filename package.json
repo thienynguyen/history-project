@@ -15,7 +15,9 @@
   },
   "dependencies": {
     "vue": "^3.5.22",
-    "vue-router": "^4.6.3"
+    "vue-draggable": "^2.0.6",
+    "vue-router": "^4.6.3",
+    "vuedraggable": "^4.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.37.0",
