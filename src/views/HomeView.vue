@@ -43,7 +43,7 @@ import { RouterLink } from 'vue-router'
       </div>
     </div>
     <div class="container" id="how-to-play">
-      <img src="../assets/tutorial.gif" alt="tutorial" />
+      <img src="../assets/tutorial.gif" alt="tutorial video" />
       <div class="left-box">
         <h1>How to Play?</h1>
         <p>

@@ -1,7 +1,7 @@
 <!-- ShipTriviaCard.vue -->
 <script setup>
 import { computed } from 'vue'
-import shipLocation from '@/assets/ship-silhouette2.png'
+import shipLocation from '@/assets/ship-silhouette.png'
 const props = defineProps({
   item:   { type: Object, required: true },   // { id, subject, year, image }
   placed: { type: Boolean, default: false },
