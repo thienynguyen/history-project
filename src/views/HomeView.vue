@@ -97,7 +97,7 @@ div.container {
   justify-content: center;
   flex-wrap: wrap;
   gap: 24px;
-  border: chartreuse 1px solid;
+  /*border: chartreuse 1px solid;*/
 }
 
 div.container img {
