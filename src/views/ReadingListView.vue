@@ -1,6 +1,6 @@
 <script setup>
 import ReadingList from '@/components/ReadingList.vue'
-import readings from '@/assets/readings.json'
+import readings from '@/data/readings.json'
 </script>
 
 <template>

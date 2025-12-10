@@ -1,5 +1,5 @@
 <script setup>
-import readings from '@/assets/readings.json'
+import readings from '@/data/readings.json'
 import { useRoute } from 'vue-router'
 
 const route = useRoute()

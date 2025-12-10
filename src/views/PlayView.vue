@@ -1,7 +1,7 @@
 <script setup>
 import { ref, watch, nextTick, reactive } from 'vue'
 import draggable from 'vuedraggable'
-import rawTrivia from '@/assets/trivia.json'
+import rawTrivia from '@/data/trivia.json'
 import TriviaCard from '@/components/TriviaCard.vue'
 import PlayViewMobile from '@/views/PlayViewMobile.vue'
 

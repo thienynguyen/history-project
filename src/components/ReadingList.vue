@@ -14,7 +14,7 @@ const props = defineProps({
         </div>
         <p>{{ reading.description }}</p>
       </div>
-      <aside>&#8250;</aside>
+      <aside><img src="../assets/arrow-next.svg" alt=">"></aside>
     </router-link>
   </section>
 </template>
@@ -42,5 +42,9 @@ a{
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+img{
+  height: 100%;
+  width: 40px;
 }
 </style>

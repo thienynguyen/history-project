@@ -13,8 +13,14 @@ import { RouterLink } from 'vue-router'
           Try organizing historical events based on when they happened by playing our game!
         </p>
         <div class="buttons">
-          <RouterLink to="/play" class="play-link">Play game &#x2192;</RouterLink>
-          <RouterLink to="/readings" class="readings-link">Read more &#x2192;</RouterLink>
+          <RouterLink to="/play" class="play-link">
+            Play game
+            <img class="arrow red" src="../assets/arrow-right.svg" alt="right arrow" />
+          </RouterLink>
+          <RouterLink to="/readings" class="readings-link">
+            Read more
+            <img class="arrow" src="../assets/arrow-right.svg" alt="right arrow" />
+          </RouterLink>
         </div>
       </div>
       <img
@@ -41,7 +47,10 @@ import { RouterLink } from 'vue-router'
         historical sources.
       </p>
       <div class="button">
-        <RouterLink to="/readings" class="readings-link">Read more &#x2192;</RouterLink>
+        <RouterLink to="/readings" class="readings-link">
+          Read more
+          <img class="arrow" src="../assets/arrow-right.svg" alt="right arrow" />
+        </RouterLink>
       </div>
     </div>
 
@@ -77,10 +86,14 @@ import { RouterLink } from 'vue-router'
           ⚓
         </p>
         <div class="button">
-          <RouterLink to="/play" class="play-link">Play game &#x2192;</RouterLink>
+          <RouterLink to="/play" class="play-link">
+            Play game
+            <img class="arrow red" src="../assets/arrow-right.svg" alt="right arrow" />
+          </RouterLink>
         </div>
       </div>
     </div>
+
     <div class="container" id="how-to-play-mobile">
       <img
         src="../assets/tutorialmobile.gif"
@@ -112,7 +125,10 @@ import { RouterLink } from 'vue-router'
           place in order while testing your sense of history.
         </p>
         <div class="button">
-          <RouterLink to="/play" class="play-link">Play game &#x2192;</RouterLink>
+          <RouterLink to="/play" class="play-link">
+            Play game
+            <img class="arrow red" src="../assets/arrow-right.svg" alt="right arrow" />
+          </RouterLink>
         </div>
       </div>
     </div>
@@ -137,31 +153,32 @@ div.container {
   justify-content: flex-start;
   flex-wrap: wrap;
   gap: 24px;
+}
 
-  &.background {
-    background-color: rgba(185, 178, 163, 0.6);
-    border-radius: 15px;
-  }
+div.container.background {
+  background-color: rgba(185, 178, 163, 0.6);
+  border-radius: 15px;
+}
 
-  img {
-    max-width: 50%;
-    border-radius: 10px;
-    margin: 0;
-    max-height: 60vh;
-  }
+img {
+  max-width: 50%;
+  border-radius: 10px;
+  margin: 0;
+  max-height: 60vh;
+  object-fit: cover;
+}
 
-  .left-box {
-    flex: 1 1;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+div.container .left-box {
+  flex: 1 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  a {
-    padding: 10px 15px;
-    text-decoration: none;
-  }
+div.container a {
+  padding: 10px 15px;
+  text-decoration: none;
 }
 
 .play-link {
@@ -171,11 +188,11 @@ div.container {
   transition:
     background-color 0.5s ease,
     color 0.5s ease;
+}
 
-  &:hover {
-    background-color: #f9f3e9;
-    color: var(--dark1);
-  }
+.play-link:hover {
+  background-color: #f9f3e9;
+  color: var(--dark1);
 }
 
 .readings-link {
@@ -184,11 +201,11 @@ div.container {
   transition:
     font-size 0.5s ease,
     color 0.5s ease;
+}
 
-  &:hover {
-    font-weight: bolder;
-    color: black;
-  }
+.readings-link:hover {
+  font-weight: bolder;
+  color: black;
 }
 
 .buttons {
@@ -204,26 +221,36 @@ div.container {
   justify-content: flex-end;
 }
 
-@media (max-width: 1000px) {
+img.arrow {
+  width: 12px;
+  margin-left: 4px;
+}
+
+img.arrow.red {
+  filter: invert(100%);
+}
+@media (max-width: 800px) {
   div.container {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
 
-    img {
-      max-width: 520px;
-      width: 100%;
-      border-radius: 10px;
-      margin: 0;
-    }
+  div.container .left-box {
+    flex: 1 1 420px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    .left-box {
-      flex: 1 1 420px;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+  div.container > img {
+    max-width: 100%;
+  }
+
+  img.arrow {
+    width: 12px;
+    max-width: 12px;
   }
 
   .button {
