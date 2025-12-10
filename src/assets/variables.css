@@ -1,8 +1,8 @@
 :root {
-  --main1: #B9B2A3;
+  --main1: rgba(185, 178, 163, 0.5);
   --dark1: #404948;
   --main2: #D6AF6C;
-  --main3: #B44541;
+  --main3: rgb(180, 69, 65);
   --dark2: #632621;
 }
 @font-face {

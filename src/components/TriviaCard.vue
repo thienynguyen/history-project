@@ -1,4 +1,3 @@
-<!-- ShipTriviaCard.vue -->
 <script setup>
 import { computed } from 'vue'
 import shipLocation from '@/assets/ship-silhouette.png'
@@ -68,7 +67,6 @@ const sailStyle = computed(() => ({
   pointer-events: none;
 }
 
-/* text + year overlays */
 .info{
   position: absolute;
   inset: 0;

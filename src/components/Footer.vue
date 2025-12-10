@@ -12,5 +12,6 @@
 section{
   display: flex;
   justify-content: center;
+  max-height: 24px;
 }
 </style>

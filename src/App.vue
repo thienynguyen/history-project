@@ -12,32 +12,26 @@ import './assets/variables.css';
       </header>
       <section class="main-content">
         <router-view></router-view>
+        <footer>
+          <Footer></Footer>
+        </footer>
       </section>
     </section>
-    <footer>
-      <Footer></Footer>
-    </footer>
   </section>
 </template>
 
 <style scoped>
+section {
+  margin:0;
+  padding:0;
+}
 .container {
   color: var(--dark1);
   display: flex;
   flex-direction: column;
-  footer{
-    justify-self: flex-end;
-  }
 }
 .main-content{
-  min-height: 80vh;
-  width: 80%;
   margin: auto;
-  background-color: white;
-}
-.content{
-  display: flex;
-  flex-direction: column;
 }
 @media (width < 600px){
   .content{

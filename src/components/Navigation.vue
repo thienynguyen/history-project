@@ -7,6 +7,7 @@ import { RouterLink } from "vue-router";
   <RouterLink to="/">Home</RouterLink>
   <RouterLink to="/play">Play</RouterLink>
   <RouterLink to="/readings">Read</RouterLink>
+  <RouterLink to="/study">Study</RouterLink>
 </nav>
 </template>
 
@@ -34,7 +35,6 @@ nav{
       background-color: #f9f3e9;
       padding: 10px 40px;
     }
-
   }
   .router-link-active {
     background-color: var(--main1);
@@ -50,10 +50,10 @@ nav{
     padding: 8px;
     z-index: 1000;
     a{
-      padding: 8px 15px;
+      padding: 8px 10px;
     }
     a:hover{
-      padding: 8px 25px;
+      padding: 8px 15px;
     }
   }
 }
