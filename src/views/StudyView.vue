@@ -28,6 +28,7 @@ function prevCard() {
 function toggleFlip() {
   isFlipped.value = !isFlipped.value
 }
+
 function markCorrect() {
   if (!currentCard.value) return
   const id = currentCard.value.id
@@ -53,6 +54,7 @@ function markIncorrect() {
 
   advanceAfterAnswer()
 }
+
 function advanceAfterAnswer() {
   isFlipped.value = false
 
@@ -61,13 +63,10 @@ function advanceAfterAnswer() {
   }
 }
 
-
-const correctCards = computed(() =>
-  flashcards.filter((card) => correctIds.value.includes(card.id))
-)
+const correctCards = computed(() => flashcards.filter((card) => correctIds.value.includes(card.id)))
 
 const incorrectCards = computed(() =>
-  flashcards.filter((card) => incorrectIds.value.includes(card.id))
+  flashcards.filter((card) => incorrectIds.value.includes(card.id)),
 )
 </script>
 
@@ -86,8 +85,14 @@ const incorrectCards = computed(() =>
           </div>
         </div>
         <div class="answer-buttons">
-          <button @click.stop="markCorrect">I got it right ✅</button>
-          <button @click.stop="markIncorrect">I got it wrong ❌</button>
+          <button @click.stop="markCorrect">
+            I got it right
+            <img class="icon correct" src="../assets/right.svg" alt="checkmark" />
+          </button>
+          <button @click.stop="markIncorrect">
+            I got it wrong
+            <img class="icon incorrect" src="../assets/wrong.svg" alt="x" />
+          </button>
         </div>
       </div>
     </div>
@@ -96,10 +101,7 @@ const incorrectCards = computed(() =>
       <aside class="correct">
         <h2>Correct</h2>
         <ul>
-          <li
-            v-for="card in correctCards"
-            :key="card.id"
-          >
+          <li v-for="card in correctCards" :key="card.id">
             {{ card.front }}
           </li>
         </ul>
@@ -108,10 +110,7 @@ const incorrectCards = computed(() =>
       <aside class="incorrect">
         <h2>Incorrect</h2>
         <ul>
-          <li
-            v-for="card in incorrectCards"
-            :key="card.id"
-          >
+          <li v-for="card in incorrectCards" :key="card.id">
             {{ card.front }}
           </li>
         </ul>
@@ -131,7 +130,7 @@ const incorrectCards = computed(() =>
   margin: auto auto;
 }
 
-.flashcard-area{
+.flashcard-area {
   height: 84vh;
 }
 
@@ -205,6 +204,22 @@ const incorrectCards = computed(() =>
   background: #f0e1c7;
 }
 
+img.icon {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+}
+
+/* green checkmark */
+img.icon.correct {
+  filter: invert(42%) sepia(77%) saturate(402%) hue-rotate(80deg) brightness(95%) contrast(90%);
+}
+
+/* red X */
+img.icon.incorrect {
+  filter: invert(16%) sepia(91%) saturate(7483%) hue-rotate(0deg) brightness(95%) contrast(105%);
+}
+
 .sidebar {
   display: flex;
   flex-direction: column;
@@ -222,8 +237,9 @@ aside.incorrect {
   width: 100%;
   height: 100%;
 }
-@media (width < 1000px) {
 
+
+@media (width < 1000px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -232,6 +248,7 @@ aside.incorrect {
     justify-content: center;
     width: 100%;
   }
+
   .sidebar {
     display: flex;
     flex-direction: row;
@@ -244,10 +261,12 @@ aside.incorrect {
   .flip-card {
     width: 84vw;
   }
+
   .answer-buttons {
     width: 84vw;
   }
-  .flashcard-area{
+
+  .flashcard-area {
     height: 48vh;
   }
 }
